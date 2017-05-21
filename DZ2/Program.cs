@@ -10,6 +10,23 @@ namespace DZ2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите числа для получения их суммы (через пробел)");
+            string [] arr=Console.ReadLine().Split();
+            int sum = 0;
+            foreach(var item in arr)
+            {
+                try
+                {
+                    sum = sum +Int32.Parse(item);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                
+               // sum = sum + Int32.Parse(item); это был первый вариант, который вылетал при вводе фигни
+            }
+            Console.WriteLine("Сумма введённых чисел равна {0}",sum);
         }
     }
 }
