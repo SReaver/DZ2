@@ -12,7 +12,7 @@ namespace DZ2
         {
             Console.WriteLine("Введите имя");
             string name = Console.ReadLine();
-            Console.WriteLine(name);
+            Console.WriteLine("Превед {0}!",name);
             Console.WriteLine("Введите числа для получения их суммы (через пробел)");
             string [] arr=Console.ReadLine().Split();
             int sum = 0;
